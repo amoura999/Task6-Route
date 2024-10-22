@@ -1,0 +1,233 @@
+:root {
+  --blue-color: #0078ff;
+  --white-color: rgb(255, 255, 255);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+}
+/* -------------------------------------------------------------- */
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 50%;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.3s ease-in-out;
+}
+.navbar-nav .nav-link.active:hover::after {
+  width: 50%;
+}
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+  width: 76%;
+}
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+}
+
+/* --------------------------------------------------------- */
+.hero {
+  background-image: url("/IMGS/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/* --------------------------------------------- */
+main {
+  background-color: #f5f5f5;
+}
+section {
+  padding: 50px;
+}
+.amr::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 00px;
+  width: 10%;
+  height: 3px;
+  background-color: var(--blue-color);
+  transition: width 0.3s ease-in-out;
+}
+/* -------------------------------------------- */
+.services .words .line::after,
+.portfolio .words .line::after,
+.blog .words .line::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 4px;
+  background-color: var(--blue-color);
+  bottom: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.services .cardd .icon i,
+.numbers .cardd .icon i {
+  font-size: 40px;
+}
+.services .cardd::before {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px var(--blue-color);
+  left: 50%;
+  top: 7%;
+  transform: translateX(-50%);
+}
+
+.portfolio .card-body span {
+  color: var(--blue-color);
+}
+/* --------------------------------------------------- */
+.numbers {
+  background-image: url("/IMGS/counters-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.slider,
+.touch {
+  background-image: url("/IMGS/overlay-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.numbers::before,
+.slider::before,
+.touch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-color);
+  opacity: 0.7;
+  z-index: 1;
+}
+.numbers-content,
+.slider-content,
+.touch-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+}
+.numbers .cardd::before {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #cde1f8;
+  left: 50%;
+  top: -10%;
+  transform: translateX(-50%);
+}
+/* -------------------------------------------------- */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease-in-out;
+}
+.portfolio .card:hover img {
+  transform: scale(1.2);
+}
+/* --------------------------------------------- */
+.blog .card-footer img {
+  width: 30px;
+}
+.blog .card .card-body::after {
+  content: "TRAVEL";
+  position: absolute;
+  background-color: var(--blue-color);
+  color: white;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  padding: 2px 15px;
+  font-size: 12px;
+}
+/* ----------------------------------------------- */
+.touch .touch-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 00px;
+  width: 20%;
+  height: 3px;
+  background-color: var(--blue-color);
+  transition: width 0.3s ease-in-out;
+}
+.icons li i {
+  font-size: 24px;
+  z-index: 2;
+}
+.icons li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--blue-color);
+  z-index: 1;
+}
+.touch .more-info span {
+  color: var(--blue-color);
+}
+/* --------------------------------------- */
+footer {
+  background-color: #0062d3;
+}
